@@ -2,7 +2,6 @@ import React from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {onboardingRouteStack} from '../constants/routes';
 import SignIn from '../screens/auth/SignIn';
-import ForgotPassword from '../screens/auth/ForgotPassword';
 import {KeyboardAvoidingView, Platform} from 'react-native';
 
 const Stack = createStackNavigator();
@@ -24,13 +23,6 @@ function AuthRoute() {
         <Stack.Screen
           name={onboardingRouteStack.SignIn}
           component={SignIn}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name={onboardingRouteStack.ForgotPassword}
-          component={ForgotPassword}
           options={{
             headerShown: false,
           }}

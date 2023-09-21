@@ -1,6 +1,5 @@
 export const onboardingRouteStack = {
   SignIn: 'SignIn',
-  ForgotPassword: 'ForgotPassword',
 };
 
 export const dashboardRouteStack = {

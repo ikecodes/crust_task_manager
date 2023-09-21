@@ -9,6 +9,7 @@ import {Navigation} from './src/routes';
 import {MenuProvider} from 'react-native-popup-menu';
 import Toast from 'react-native-toast-message';
 import {toastConfig} from './src/config/toastConfig';
+import {PaperProvider} from 'react-native-paper';
 
 // import SplashScreen from 'react-native-splash-screen';
 
@@ -22,18 +23,20 @@ function App(): JSX.Element {
       <MenuProvider>
         <QueryClientProvider client={queryClient}>
           <Provider store={store}>
-            <PersistGate loading={null} persistor={persistor}>
-              <KeyboardAvoidingView
-                style={{flex: 1}}
-                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-                <Navigation />
-                <Toast
-                  position="bottom"
-                  bottomOffset={150}
-                  config={toastConfig}
-                />
-              </KeyboardAvoidingView>
-            </PersistGate>
+            <PaperProvider>
+              <PersistGate loading={null} persistor={persistor}>
+                <KeyboardAvoidingView
+                  style={{flex: 1}}
+                  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+                  <Navigation />
+                  <Toast
+                    position="bottom"
+                    bottomOffset={150}
+                    config={toastConfig}
+                  />
+                </KeyboardAvoidingView>
+              </PersistGate>
+            </PaperProvider>
           </Provider>
         </QueryClientProvider>
       </MenuProvider>

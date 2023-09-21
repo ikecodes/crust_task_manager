@@ -33,8 +33,8 @@ const TabScreen = () => {
           paddingBottom: 10,
           paddingHorizontal: 20,
           height: 75,
-          borderTopWidth: 0,
-          elevation: 0,
+          borderTopWidth: 1,
+          elevation: 5,
         },
         tabBarLabelStyle: {
           fontWeight: '400',

@@ -5,7 +5,6 @@ import {primaryColor} from '../../theme/colors';
 import PrimaryButton from '../../components/button/PrimaryButton';
 import InputField from '../../components/inputs/InputField';
 import {useDispatch} from 'react-redux';
-import {onboardingRouteStack} from '../../constants/routes';
 import Headers from '../../components/shared/Header';
 import {setUser} from '../../slices/userSlice';
 import GeneralLayout from '../../components/shared/GeneralLayout';
@@ -64,9 +63,7 @@ const SignIn = ({navigation}) => {
                   <View style={tw`items-end`}>
                     <Text
                       style={tw`underline font-semibold text-[${primaryColor.primaryBase}]`}
-                      onPress={() =>
-                        navigation.navigate(onboardingRouteStack.ForgotPassword)
-                      }>
+                      onPress={() => {}}>
                       Forgot Password
                     </Text>
                   </View>

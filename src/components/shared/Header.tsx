@@ -1,10 +1,10 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import tw from 'twrnc';
-import {monoChrome, grayColor, primaryColor} from '../../theme/colors';
+import {grayColor, primaryColor} from '../../theme/colors';
 
 interface Props {
-  text: string;
+  text: any;
   subText?: string;
   loader?: boolean;
   maxHeader?: boolean;
@@ -20,9 +20,9 @@ const Headers: React.FC<Props> = ({
   return (
     <View style={tw`flex`}>
       <Text
-        style={tw`text-3xl mt-3 w-[${
+        style={tw`text-2xl mt-3 w-[${
           maxHeader ? '100%' : '70%'
-        }]  font-semibold text-[${monoChrome.black}]`}>
+        }]  font-semibold text-[${grayColor.neutral300}]`}>
         {text}
       </Text>
       <Text style={tw`mt-2 text-base text-[${grayColor.neutral800}]`}>
