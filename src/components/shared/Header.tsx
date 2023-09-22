@@ -1,42 +1,33 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import tw from 'twrnc';
-import {grayColor, primaryColor} from '../../theme/colors';
+import {grayColor, pendingColor, successColor} from '../../theme/colors';
 
 interface Props {
   text: any;
-  subText?: string;
-  loader?: boolean;
   maxHeader?: boolean;
-  loaderWidth?: string;
 }
-const Headers: React.FC<Props> = ({
-  text,
-  subText,
-  loader,
-  loaderWidth,
-  maxHeader,
-}) => {
+const Headers: React.FC<Props> = ({text}) => {
   return (
     <View style={tw`flex`}>
       <Text
-        style={tw`text-2xl mt-3 w-[${
-          maxHeader ? '100%' : '70%'
-        }]  font-semibold text-[${grayColor.neutral300}]`}>
+        style={tw`text-lg mt-3 italic font-semibold text-[${grayColor.neutral300}]`}>
         {text}
       </Text>
-      <Text style={tw`mt-2 text-base text-[${grayColor.neutral800}]`}>
-        {subText}
-      </Text>
-      {loader && (
-        <View style={tw`mt-3 h-1.5 rounded-xl bg-[${primaryColor.primary10}]`}>
+      <View style={tw`flex-row items-center my-2`}>
+        <View style={tw`flex-row items-center mr-2`}>
           <View
-            style={tw`h-1.5 rounded-xl bg-[${primaryColor.primaryBase}] w-[${
-              loaderWidth ? `${loaderWidth}%` : '40%'
-            }]`}
+            style={tw`mr-2 h-3 w-3 bg-[${successColor.success0}] rounded`}
           />
+          <Text>Completed</Text>
         </View>
-      )}
+        <View style={tw`flex-row items-center`}>
+          <View
+            style={tw`mr-2 h-3 w-3 bg-[${pendingColor.pending0}] rounded`}
+          />
+          <Text>Pending</Text>
+        </View>
+      </View>
     </View>
   );
 };

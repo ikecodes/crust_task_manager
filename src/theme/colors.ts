@@ -31,7 +31,7 @@ export const pendingColor = {
   pending3: '#FFF6E5',
 };
 export const successColor = {
-  success0: '#14FF80',
+  success0: '#198754',
 };
 export const errorColor = {
   error0: '#FF6666',

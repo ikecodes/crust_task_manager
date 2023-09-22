@@ -62,6 +62,11 @@ const InputField: React.FC<Props> = ({
           />
         )}
       </View>
+      {error ? (
+        <Text style={tw`text-[${warningColor.warning5}]`}>{error}</Text>
+      ) : (
+        <Text />
+      )}
     </View>
   );
 };

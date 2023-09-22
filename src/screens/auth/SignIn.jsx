@@ -5,12 +5,12 @@ import {primaryColor} from '../../theme/colors';
 import PrimaryButton from '../../components/button/PrimaryButton';
 import InputField from '../../components/inputs/InputField';
 import {useDispatch} from 'react-redux';
-import Headers from '../../components/shared/Header';
 import {setUser} from '../../slices/userSlice';
 import GeneralLayout from '../../components/shared/GeneralLayout';
 import Toast from 'react-native-toast-message';
 import {Formik} from 'formik';
 import {signInSchema} from '../../utils/validationSchemas';
+import PageHeader from '../../components/shared/PageHeader';
 
 const SignIn = ({navigation}) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +20,10 @@ const SignIn = ({navigation}) => {
   return (
     <GeneralLayout style={tw`flex-1 bg-white px-5 pt-10`}>
       <View style={tw`mt-10`}>
-        <Headers text={'Login to your account'} subText={'Personal details'} />
+        <PageHeader
+          text={'Login to your account'}
+          subText={'Personal details'}
+        />
         <Formik
           initialValues={{
             username: '',

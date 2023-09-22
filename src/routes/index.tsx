@@ -1,4 +1,5 @@
 import React from 'react';
+import 'react-native-get-random-values';
 import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import AuthRoute from './Auth.routes';
