@@ -15,7 +15,7 @@ npm install
 yarn
 ```
 
-Then cd.. into ios directory and run
+Then cd into ios directory and run
 
 ```bash
 pod install
@@ -56,4 +56,4 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly. You can type in any username and password to login

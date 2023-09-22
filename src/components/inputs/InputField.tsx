@@ -1,4 +1,10 @@
-import {View, TextInput, Text, KeyboardTypeOptions} from 'react-native';
+import {
+  View,
+  TextInput,
+  Text,
+  KeyboardTypeOptions,
+  Platform,
+} from 'react-native';
 import React, {useState} from 'react';
 import tw from 'twrnc';
 import {grayColor, warningColor} from '../../theme/colors';
@@ -47,7 +53,9 @@ const InputField: React.FC<Props> = ({
           placeholderTextColor={grayColor.neutral300}
           autoCorrect={false}
           value={value}
-          style={tw`flex-1 text-base text-black`}
+          style={tw`flex-1 text-base text-black ${
+            Platform.OS === 'ios' ? 'h-10' : ''
+          }`}
           keyboardType={keyboardType ?? 'default'}
           onChangeText={onChangeText}
           {...rest}
